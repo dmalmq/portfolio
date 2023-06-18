@@ -77,7 +77,7 @@ export const PinterestIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   </svg>
 );
 
-export const DribbbleIcon = ({ className, ...rest }) => (
+export const DribbbleIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
