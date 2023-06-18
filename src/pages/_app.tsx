@@ -3,6 +3,7 @@ import "Y/styles/globals.css";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import Navbar from "Y/components/Navbar";
+import Footer from "Y/components/Footer";
 
 interface MontserratOptions {
   subsets: string[];
@@ -37,6 +38,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       >
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </main>
     </>
   );
