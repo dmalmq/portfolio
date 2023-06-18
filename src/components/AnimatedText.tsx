@@ -74,7 +74,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
       >
         {text.split(" ").map((word, index) => (
           <motion.span
-            key={word + "-" + index}
+            key={`${word}-${index}`}
             className="inline-block"
             variants={singleWord}
           >

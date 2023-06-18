@@ -1,6 +1,5 @@
 import { type AppType } from "next/dist/shared/lib/utils";
 import "Y/styles/globals.css";
-import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import Navbar from "Y/components/Navbar";
 import Footer from "Y/components/Footer";
