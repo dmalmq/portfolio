@@ -4,10 +4,19 @@ import Layout from "../components/Layout";
 import AnimateText from "../components/AnimatedText";
 import Image from "next/image";
 import profilePic from "../../public/images/avatar.png";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
+import {
+  useInView,
+  useMotionValue,
+  useSpring,
+  MotionValue,
+} from "framer-motion";
 import Skills from "../components/Skills";
 
-const AnimatedNumbers = ({ value }) => {
+interface AnimatedNumbersProps {
+  value: string;
+}
+
+const AnimatedNumbers: React.FC<AnimatedNumbersProps> = ({ value }) => {
   const ref = React.useRef(null);
 
   const motionValue = useMotionValue(0);
@@ -16,13 +25,13 @@ const AnimatedNumbers = ({ value }) => {
 
   React.useEffect(() => {
     if (isInView) {
-      motionValue.set(value);
+      motionValue.set(parseFloat(value));
     }
   }, [isInView, value, motionValue]);
 
   React.useEffect(() => {
-    springValue.on("change", (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
+    springValue.on("change", (latest: MotionValue) => {
+      if (ref.current && latest.toFixed(0) <= parseFloat(value)) {
         ref.current.textContent = latest.toFixed(0);
       }
     });

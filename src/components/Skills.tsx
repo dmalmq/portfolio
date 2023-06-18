@@ -1,13 +1,23 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const Skill = ({ name, x, y }) => {
+interface SkillProps {
+  name: string;
+  x: string;
+  y: string;
+}
+
+const Skill: React.FC<SkillProps> = ({ name, x, y }) => {
+  const skillVariants: Variants = {
+    initial: { x: 0, y: 0 },
+    whileInView: { x, y },
+  };
+
   return (
     <motion.div
       className="absolute flex cursor-pointer items-center justify-center rounded-full bg-dark px-6 py-3 font-semibold text-light shadow-dark"
       whileHover={{ scale: 1.05 }}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y }}
+      variants={skillVariants}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
     >
@@ -16,7 +26,7 @@ const Skill = ({ name, x, y }) => {
   );
 };
 
-const Skills = () => {
+const Skills: React.FC = () => {
   return (
     <>
       <h2 className="mt-64 w-full text-center text-8xl font-bold">Skills</h2>
@@ -39,4 +49,5 @@ const Skills = () => {
     </>
   );
 };
+
 export default Skills;

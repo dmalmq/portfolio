@@ -1,7 +1,39 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const quote = {
+interface QuoteVariants extends Variants {
+  initial: {
+    opacity: number;
+  };
+  animate: {
+    opacity: number;
+    transition: {
+      delay: number;
+      staggerChildren: number;
+    };
+  };
+}
+
+interface SingleWordVariants extends Variants {
+  initial: {
+    opacity: number;
+    y: number;
+  };
+  animate: {
+    opacity: number;
+    y: number;
+    transition: {
+      duration: number;
+    };
+  };
+}
+
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+}
+
+const quote: QuoteVariants = {
   initial: {
     opacity: 1,
   },
@@ -14,7 +46,7 @@ const quote = {
   },
 };
 
-const singleWord = {
+const singleWord: SingleWordVariants = {
   initial: {
     opacity: 0,
     y: 50,
@@ -28,7 +60,10 @@ const singleWord = {
   },
 };
 
-const AnimatedText = ({ text, className = "" }) => {
+const AnimatedText: React.FC<AnimatedTextProps> = ({
+  text,
+  className = "",
+}) => {
   return (
     <div className="mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-center">
       <motion.h1

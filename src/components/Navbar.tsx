@@ -5,7 +5,17 @@ import Logo from "./Logo";
 import { GithubIcon, LinkedInIcon, TwitterIcon } from "./Icons";
 import { motion } from "framer-motion";
 
-const CustomLink = ({ href, title, className = "" }) => {
+interface CustomLinkProps {
+  href: string;
+  title: string;
+  className?: string;
+}
+
+const CustomLink: React.FC<CustomLinkProps> = ({
+  href,
+  title,
+  className = "",
+}) => {
   const router = useRouter();
   console.log(router);
   return (

@@ -1,6 +1,11 @@
 import * as React from "react";
+import { SVGProps } from "react";
 
-export const GithubIcon = ({ className, ...rest }) => (
+interface IconProps extends SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+export const GithubIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -17,7 +22,7 @@ export const GithubIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const TwitterIcon = ({ className, ...rest }) => (
+export const TwitterIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -34,7 +39,7 @@ export const TwitterIcon = ({ className, ...rest }) => (
   </svg>
 );
 // #0A66C2
-export const LinkedInIcon = ({ className, ...rest }) => (
+export const LinkedInIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -55,7 +60,7 @@ export const LinkedInIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const PinterestIcon = ({ className, ...rest }) => (
+export const PinterestIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -93,7 +98,7 @@ export const DribbbleIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const SunIcon = ({ className, ...rest }) => (
+export const SunIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -271,7 +276,7 @@ export const SunIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const MoonIcon = ({ className, ...rest }) => (
+export const MoonIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -427,7 +432,7 @@ export const MoonIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const CircularText = ({ className, ...rest }) => (
+export const CircularText: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="496"
@@ -441,7 +446,7 @@ export const CircularText = ({ className, ...rest }) => (
   </svg>
 );
 
-export const LinkArrow = ({ className, ...rest }) => (
+export const LinkArrow: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
