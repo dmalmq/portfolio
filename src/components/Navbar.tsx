@@ -23,9 +23,8 @@ const CustomLink: React.FC<CustomLinkProps> = ({
       {title}
 
       <span
-        className={`transistion-[width] ease absolute -bottom-1 left-0 inline-block h-[2px]  bg-dark duration-300 group-hover:w-full ${
-          router.asPath === href ? "w-full" : "w-0"
-        }
+        className={`transistion-[width] ease absolute -bottom-1 left-0 inline-block h-[2px]  bg-dark duration-300 group-hover:w-full ${router.asPath === href ? "w-full" : "w-0"
+          }
         }`}
       >
         &nbsp;
@@ -40,6 +39,7 @@ const Navbar = () => {
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
+        <CustomLink href="/background" title="Background" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="ml-4" />
       </nav>
 

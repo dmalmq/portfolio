@@ -58,7 +58,7 @@ const Experience = () => {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-64">
+    <div className="my-48">
       <h2 className="mb-32 w-full text-center text-8xl font-bold">
         Experience
       </h2>
@@ -69,34 +69,40 @@ const Experience = () => {
         />
         <ul className="ml-4 flex w-full flex-col items-start justify-between">
           <Details
-            position="Software Engineer"
-            companyLink="https://www.google.com/"
-            company="Google"
+            position="Model Manager"
+            companyLink="https://www.tengbom.se/"
+            company="Tengbom"
             time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-search engine, including improving the accuracy and relevance of search results and 
-developing new tools for data analysis and visualization."
+            address="Stockholm, Sweden"
+            work="As a Model Manager in architectural firms working on Revit projects, I am
+responsible for overseeing and coordinating the digital building models. I
+ensure that the models are accurate, up-to-date, and comply with project
+standards and specifications. Additionally, I collaborate with project teams to
+identify and resolve any design clashes or conflicts within the models. I also
+manage the model’s organization, including file naming conventions, model
+versions, and model sharing protocols. Overall, my role as a Model Manager
+aims to optimize project efficiency, facilitate effective collaboration, and
+deliver high-quality architectural designs."
           />
           <Details
-            position="Software Engineer"
-            companyLink="https://www.google.com/"
-            company="Google"
+            position="Civil Engineer"
+            companyLink="https://www.tengbom.se/"
+            company="Tenbom"
             time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-search engine, including improving the accuracy and relevance of search results and 
-developing new tools for data analysis and visualization."
+            address="Stockholm, Sweden"
+            work="As a dedicated Civil Engineer specializing in hospital and school projects, I
+have utilized Revit extensively to create detailed 3D models, design blueprints,
+and collaborate with engineers from various disciplines, including
+Electrical, HVAC, and Construction. Through interdisciplinary coordination
+meetings, I have ensured seamless integration of different systems within the overall building design."
           />
           <Details
-            position="Software Engineer"
-            companyLink="https://www.google.com/"
-            company="Google"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-search engine, including improving the accuracy and relevance of search results and 
-developing new tools for data analysis and visualization."
+            position="Intern"
+            companyLink="https://niras.se"
+            company="Niras (formerly Aperto)"
+            time="2015-2015"
+            address="Stockholm, Sweden"
+            work="I worked at the office as an intern while studying, it was part of my course at Stockholms Insitute of Technology to intern at a company. I worked on a school project called 'Kämpasten' where I did daylight simulations to make sure that the teachers and students would get enough daylight. This project was also part of the thesis I wrote as well."
           />
         </ul>
       </div>

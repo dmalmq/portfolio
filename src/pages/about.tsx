@@ -6,6 +6,7 @@ import Image from "next/image";
 import profilePic from "../../public/images/avatar.png";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
+import Education from "../components/Education";
 
 const About = () => {
   return (
@@ -92,7 +93,6 @@ const About = () => {
             </div>
           </div>
           <Skills />
-          <Experience />
         </Layout>
       </main>
     </>
