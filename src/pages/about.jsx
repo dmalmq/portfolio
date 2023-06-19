@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import AnimateText from "../components/AnimatedText";
@@ -8,20 +8,21 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "../components/Skills";
 
 const AnimatedNumbers = ({ value }) => {
-  const ref = useRef<HTMLSpanElement>(null);
+  const ref = React.useRef(null);
+
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
   const isInView = useInView(ref, { once: true });
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (isInView) {
       motionValue.set(parseFloat(value));
     }
   }, [isInView, value, motionValue]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     springValue.on("change", (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
+      if (ref.current && latest.toFixed(0) <= parseFloat(value)) {
         ref.current.textContent = latest.toFixed(0);
       }
     });
