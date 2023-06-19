@@ -28,10 +28,10 @@ const About = () => {
                 About me
               </h2>
               <p className="font-medium">
-                Hi, I'm a civil engineer originally from Sweden who recently
-                made a move to Japan. I have always been fascinated by
+                Hi, I&apos;m a civil engineer originally from Sweden who
+                recently made a move to Japan. I have always been fascinated by
                 technology and have developed a strong interest in coding,
-                especially in web development and software engineering. I'm
+                especially in web development and software engineering. I&apos;m
                 excited about the potential of technology to make a positive
                 impact on the world and want to be part of that change.
               </p>
@@ -41,23 +41,23 @@ const About = () => {
                 are essential qualities for a successful software developer. I
                 have been teaching myself various programming languages,
                 including JavaScript, React, Ruby, and Rails, and have worked on
-                several projects to develop my skills further. I'm always
+                several projects to develop my skills further. I&apos;m always
                 looking for opportunities to improve and receive feedback from
                 others in the field.
               </p>
               <p className="font-medium">
-                I'm highly motivated and passionate about my goal of becoming a
-                software developer. I believe that my unique background in civil
-                engineering will make me a valuable addition to any team. I'm
-                committed to continuing my learning and development in this
-                field and excited about the constantly evolving challenges and
-                opportunities it presents.{" "}
+                I&apos;m highly motivated and passionate about my goal of
+                becoming a software developer. I believe that my unique
+                background in civil engineering will make me a valuable addition
+                to any team. I&apos;m committed to continuing my learning and
+                development in this field and excited about the constantly
+                evolving challenges and opportunities it presents.{" "}
               </p>
               <p className="mt-4 font-medium">
-                Overall, I'm a detail-oriented and ambitious individual with a
-                strong drive to succeed. My passion for technology and
+                Overall, I&apos;m a detail-oriented and ambitious individual
+                with a strong drive to succeed. My passion for technology and
                 problem-solving makes me a natural fit for software development,
-                and I'm excited to see where this journey takes me.
+                and I&apos;m excited to see where this journey takes me.
               </p>
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
