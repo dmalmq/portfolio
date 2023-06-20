@@ -34,7 +34,8 @@
     "**/*.tsx",
     "**/*.jsx",
     "**/*.cjs",
-    "**/*.mjs"
+    "**/*.mjs",
+    "additional.d.ts"
   ],
   "exclude": [
     "node_modules"

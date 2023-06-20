@@ -58,7 +58,7 @@ const Experience = () => {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-48">
+    <div className="my-12">
       <h2 className="mb-32 w-full text-center text-8xl font-bold">
         Experience
       </h2>

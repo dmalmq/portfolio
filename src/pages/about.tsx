@@ -5,8 +5,6 @@ import AnimateText from "../components/AnimatedText";
 import Image from "next/image";
 import profilePic from "../../public/images/avatar.png";
 import Skills from "../components/Skills";
-import Experience from "../components/Experience";
-import Education from "../components/Education";
 
 const About = () => {
   return (
@@ -22,7 +20,7 @@ const About = () => {
         <Layout className="pt-16">
           <AnimateText
             text="A Civil Engineer Turned Software Developer"
-            className="mb-16 !text-6xl"
+            className="mb-16"
           />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">

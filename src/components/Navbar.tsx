@@ -4,6 +4,8 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { GithubIcon, LinkedInIcon, TwitterIcon } from "./Icons";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "../components/hooks/useThemeSwitcher";
+import { MoonIcon, SunIcon } from "./Icons";
 
 interface CustomLinkProps {
   href: string;
@@ -23,8 +25,9 @@ const CustomLink: React.FC<CustomLinkProps> = ({
       {title}
 
       <span
-        className={`transistion-[width] ease absolute -bottom-1 left-0 inline-block h-[2px]  bg-dark duration-300 group-hover:w-full ${router.asPath === href ? "w-full" : "w-0"
-          }
+        className={`transistion-[width] ease absolute -bottom-1 left-0 inline-block h-[2px]  bg-dark duration-300 group-hover:w-full ${
+          router.asPath === href ? "w-full" : "w-0"
+        }
         }`}
       >
         &nbsp;
@@ -34,6 +37,8 @@ const CustomLink: React.FC<CustomLinkProps> = ({
 };
 
 const Navbar = () => {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
     <header className="flex w-full items-center justify-between px-32 py-8 font-medium">
       <nav>
@@ -71,7 +76,22 @@ const Navbar = () => {
         >
           <LinkedInIcon />
         </motion.a>
+
+        <button
+          onClick={() => {
+            // @ts-ignore
+            setMode(mode === "dark" ? "light" : "dark");
+          }}
+          className="ml-3 flex items-center justify-center rounded-full p-1"
+        >
+          {mode === "dark" ? (
+            <SunIcon className={"fill-dark"} />
+          ) : (
+            <MoonIcon className={"fill-dark"} />
+          )}
+        </button>
       </nav>
+
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
       </div>
