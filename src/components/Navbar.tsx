@@ -79,6 +79,7 @@ const Navbar = () => {
 
         <button
           onClick={() => {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             setMode(mode === "dark" ? "light" : "dark");
           }}
