@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 interface QuoteVariants extends Variants {
   initial: {
@@ -65,7 +65,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   className = "",
 }) => {
   return (
-    <div className="mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-center">
+    <div className="mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-center sm:py-0">
       <motion.h1
         variants={quote}
         initial="initial"
