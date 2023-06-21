@@ -3,6 +3,8 @@ import "Y/styles/globals.css";
 import Head from "next/head";
 import Navbar from "Y/components/Navbar";
 import Footer from "Y/components/Footer";
+import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 interface MontserratOptions {
   subsets: string[];
@@ -25,6 +27,7 @@ const montserrat: Montserrat = new Montserrat({
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -36,7 +39,9 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         className={`${montserrat.variable} min-h-screen w-full bg-light font-mont dark:bg-dark`}
       >
         <Navbar />
-        <Component {...pageProps} />
+        <AnimatePresence mode="wait">
+          <Component key={router.asPath} {...pageProps} />
+        </AnimatePresence>
         <Footer />
       </main>
     </>

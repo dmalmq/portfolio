@@ -13,7 +13,12 @@ const LiIcon: React.FC<LiIconProps> = ({ reference }) => {
 
   return (
     <figure className="absolute left-0 stroke-dark dark:stroke-light">
-      <svg className="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
+      <svg
+        className="-rotate-90 md:h-[60px] md:w-[60px] xs:h-[40px] xs:w-[40px]"
+        width="75"
+        height="75"
+        viewBox="0 0 100 100"
+      >
         <circle
           cx="75"
           cy="50"

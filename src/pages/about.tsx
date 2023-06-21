@@ -5,6 +5,7 @@ import AnimateText from "../components/AnimatedText";
 import Image from "next/image";
 import profilePic from "../../public/images/avatar.png";
 import Skills from "../components/Skills";
+import TransitionEffect from "../components/TransitionEffect";
 
 const About = () => {
   return (
@@ -16,6 +17,7 @@ const About = () => {
           content="software developer ruby rails typescript tokyo"
         />
       </Head>
+      <TransitionEffect />
       <main className="flex w-full items-center justify-center">
         <Layout className="pt-16">
           <AnimateText

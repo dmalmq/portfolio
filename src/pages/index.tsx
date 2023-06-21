@@ -5,13 +5,19 @@ import Link from "next/link";
 import profilePic from "../../public/images/profile.png";
 import AnimatedText from "../components/AnimatedText";
 import { LinkArrow } from "../components/Icons";
+import TransitionEffect from "../components/TransitionEffect";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Daniel Malmqvists Portfolio</title>
+        <meta
+          name="description"
+          content="software developer ruby rails typescript go react tailwind tokyo"
+        />
       </Head>
+      <TransitionEffect />
       <main className="flex min-h-screen w-full items-center text-dark dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex w-full items-center justify-between lg:flex-col">
