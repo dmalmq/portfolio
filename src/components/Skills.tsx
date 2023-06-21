@@ -25,7 +25,9 @@ const Skill: React.FC<SkillProps> = ({ name, x, y }) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="mt-64 w-full text-center text-8xl font-bold">Skills</h2>
+      <h2 className="mt-64 w-full text-center text-8xl font-bold dark:text-light">
+        Skills
+      </h2>
       <div className="relative flex h-screen w-full items-center justify-center rounded-full bg-circularLight">
         <motion.div className="flex cursor-pointer items-center justify-center rounded-full bg-dark p-8 font-semibold text-light shadow-dark">
           Web

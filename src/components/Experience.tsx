@@ -32,20 +32,20 @@ const Details: React.FC<DetailProps> = ({
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="text-2xl font-bold capitalize">
+        <h3 className="text-2xl font-bold capitalize dark:text-light">
           {position}&nbsp;
           <a
             href={companyLink}
             target="_blank"
-            className="capitalize text-primary"
+            className="capitalize text-primary dark:text-primaryDark"
           >
             @{company}
           </a>
         </h3>
-        <span className="font-medium text-dark/75">
+        <span className="font-medium text-dark/75 dark:text-light/75">
           {time} | {address}
         </span>
-        <p className="w-full font-medium">{work}</p>
+        <p className="w-full font-medium dark:text-light">{work}</p>
       </motion.div>
     </li>
   );
@@ -59,12 +59,12 @@ const Experience = () => {
   });
   return (
     <div className="my-12">
-      <h2 className="mb-32 w-full text-center text-8xl font-bold">
+      <h2 className="mb-32 w-full text-center text-8xl font-bold dark:text-light">
         Experience
       </h2>
       <div ref={ref} className="relative mx-auto w-[75%]">
         <motion.div
-          className="absolute left-9 top-0 h-full w-[4px] origin-top bg-dark"
+          className="absolute left-9 top-0 h-full w-[4px] origin-top bg-dark dark:bg-light"
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="ml-4 flex w-full flex-col items-start justify-between">
@@ -87,7 +87,7 @@ deliver high-quality architectural designs."
           <Details
             position="Civil Engineer"
             companyLink="https://www.tengbom.se/"
-            company="Tenbom"
+            company="Tengbom"
             time="2022-Present"
             address="Stockholm, Sweden"
             work="As a dedicated Civil Engineer specializing in hospital and school projects, I

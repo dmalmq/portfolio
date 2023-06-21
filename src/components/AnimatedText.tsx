@@ -70,7 +70,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
         variants={quote}
         initial="initial"
         animate="animate"
-        className={`inline-block w-full  text-8xl font-bold capitalize text-dark ${className}`}
+        className={`inline-block w-full  text-8xl font-bold capitalize text-dark dark:text-light ${className}`}
       >
         {text.split(" ").map((word, index) => (
           <motion.span

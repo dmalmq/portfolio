@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { GithubIcon, LinkedInIcon, TwitterIcon } from "./Icons";
@@ -25,10 +26,9 @@ const CustomLink: React.FC<CustomLinkProps> = ({
       {title}
 
       <span
-        className={`transistion-[width] ease absolute -bottom-1 left-0 inline-block h-[2px]  bg-dark duration-300 group-hover:w-full ${
-          router.asPath === href ? "w-full" : "w-0"
-        }
-        }`}
+        className={`transistion-[width] ease absolute -bottom-1 left-0 inline-block h-[2px]  bg-dark duration-300 group-hover:w-full ${router.asPath === href ? "w-full" : "w-0"
+          }
+        } dark:bg-light`}
       >
         &nbsp;
       </span>
@@ -38,9 +38,32 @@ const CustomLink: React.FC<CustomLinkProps> = ({
 
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitcher();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <header className="flex w-full items-center justify-between px-32 py-8 font-medium">
+    <header className="flex w-full items-center justify-between px-32 py-8 font-medium dark:text-light">
+      <button
+        className="flex flex-col items-center justify-center"
+        onClick={handleClick}
+      >
+        <span
+          className={`block h-0.5 w-6 rounded-sm bg-dark dark:bg-light ${isOpen ? "translate-y-1 rotate-45" : "-translate-y-0.5"
+            }`}
+        ></span>
+        <span
+          className={`display my-0.5 block h-0.5 w-6 rounded-sm bg-dark dark:bg-light ${isOpen ? "opacity-0" : "opacity-100"
+            }`}
+        ></span>
+        <span
+          className={`block h-0.5 w-6 rounded-sm bg-dark dark:bg-light ${isOpen ? "-translate-y-1 -rotate-45" : "translate-y-0.5"
+            }`}
+        ></span>
+      </button>
+
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
@@ -83,7 +106,8 @@ const Navbar = () => {
             // @ts-ignore
             setMode(mode === "dark" ? "light" : "dark");
           }}
-          className="ml-3 flex items-center justify-center rounded-full p-1"
+          className={`ml-3 flex h-7 w-7 items-center justify-center rounded-full p-1
+            ${mode === "dark" ? "bg-light text-dark" : "bg-dark text-light"}`}
         >
           {mode === "dark" ? (
             <SunIcon className={"fill-dark"} />

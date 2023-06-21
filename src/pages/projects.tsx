@@ -32,8 +32,8 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
   github,
 }) => {
   return (
-    <article className="relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light p-12 shadow-2xl">
-      <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark" />
+    <article className="relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark">
+      <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light" />
       <Link
         href={link}
         target="_blank"
@@ -45,27 +45,33 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
           className="h-auto w-full rounded-3xl"
           width={3100}
           height={1700}
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw)"
         />
       </Link>
 
       <div className="flex w-1/2 flex-col items-start justify-between pl-6">
-        <span className="text-xl font-medium text-primary">{type}</span>
+        <span className="text-xl font-medium text-primary dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="underline-offset-2 hover:underline"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light">
+            {title}
+          </h2>
         </Link>
-        <p className="my-2 font-medium text-dark">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         <div className="mt-2 flex items-center">
-          <Link href={github} target="_blank" className="w-10">
+          <Link href={github} target="_blank" className="w-10 dark:text-light">
             <GithubIcon />
           </Link>
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light"
+            className="ml-4 rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark"
           >
             Visit Project
           </Link>
@@ -83,8 +89,8 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
 //   github,
 // }) => {
 //   return (
-//     <article className="flex relative flex-col justify-center items-center p-6 w-full rounded-2xl border border-solid border-dark bg-light">
-//       <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-[2rem] rounded-br-3xl bg-dark" />
+//     <article className="flex relative flex-col justify-center items-center p-6 w-full rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-dark">
+//       <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light" />
 //       <Link
 //         href={link}
 //         target="_blank"
@@ -99,7 +105,7 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
 //         />
 //       </Link>
 //       <div className="flex flex-col justify-between items-start w-full">
-//         <span className="text-xl font-medium text-primary">{type}</span>
+//         <span className="text-xl font-medium text-primary dark:text-primaryDark">{type}</span>
 //         <Link
 //           href={link}
 //           target="_blank"
@@ -111,12 +117,12 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
 //           <Link
 //             href={link}
 //             target="_blank"
-//             className="ml-4 text-lg font-semibold"
+//             className="ml-4 text-lg font-semibold dark:bg-light dark:text-dark"
 //           >
 //             Visit Project
 //           </Link>
 //           <div className="flex items-center mt-2">
-//             <Link href={github} target="_blank" className="w-10">
+//             <Link href={github} target="_blank" className="w-10 dark:text-light">
 //               <GithubIcon />
 //             </Link>
 //           </div>

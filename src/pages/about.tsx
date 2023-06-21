@@ -24,10 +24,10 @@ const About = () => {
           />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 About me
               </h2>
-              <p className="font-medium">
+              <p className="font-medium dark:text-light">
                 Hi, I&apos;m a civil engineer originally from Sweden who
                 recently made a move to Japan. I have always been fascinated by
                 technology and have developed a strong interest in coding,
@@ -35,7 +35,7 @@ const About = () => {
                 excited about the potential of technology to make a positive
                 impact on the world and want to be part of that change.
               </p>
-              <p className="my-4 font-medium">
+              <p className="my-4 font-medium dark:text-light">
                 With my background in engineering, I have honed my
                 problem-solving skills and attention to detail, which I believe
                 are essential qualities for a successful software developer. I
@@ -45,7 +45,7 @@ const About = () => {
                 looking for opportunities to improve and receive feedback from
                 others in the field.
               </p>
-              <p className="font-medium">
+              <p className="font-medium dark:text-light">
                 I&apos;m highly motivated and passionate about my goal of
                 becoming a software developer. I believe that my unique
                 background in civil engineering will make me a valuable addition
@@ -53,38 +53,46 @@ const About = () => {
                 development in this field and excited about the constantly
                 evolving challenges and opportunities it presents.{" "}
               </p>
-              <p className="mt-4 font-medium">
+              <p className="mt-4 font-medium dark:text-light">
                 Overall, I&apos;m a detail-oriented and ambitious individual
                 with a strong drive to succeed. My passion for technology and
                 problem-solving makes me a natural fit for software development,
                 and I&apos;m excited to see where this journey takes me.
               </p>
             </div>
-            <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
+            <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark">
               <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[102%] rounded-[2rem] bg-dark" />
               <Image
                 src={profilePic}
                 alt="Daniel Malnqvist"
                 className="h-auto w-full rounded-2xl"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw)"
               />
             </div>
 
             <div className="col-span-2 flex flex-col items-end justify-between">
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">7+</span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <span className="inline-block text-7xl font-bold dark:text-light">
+                  7+
+                </span>
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light">
                   years of work experience
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">5+</span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <span className="inline-block text-7xl font-bold dark:text-light">
+                  5+
+                </span>
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light">
                   projects completed
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">2+</span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <span className="inline-block text-7xl font-bold dark:text-light">
+                  2+
+                </span>
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light">
                   months of bootcamp
                 </h2>
               </div>

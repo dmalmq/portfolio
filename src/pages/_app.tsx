@@ -33,7 +33,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       </Head>
 
       <main
-        className={`${montserrat.variable} min-h-screen w-full bg-light font-mont`}
+        className={`${montserrat.variable} min-h-screen w-full bg-light font-mont dark:bg-dark`}
       >
         <Navbar />
         <Component {...pageProps} />

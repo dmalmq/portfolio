@@ -23,11 +23,13 @@ const Details: React.FC<DetailProps> = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="text-2xl font-bold capitalize">{type}&nbsp;</h3>
-        <span className="font-medium text-dark/75">
+        <h3 className="text-2xl font-bold capitalize dark:text-light">
+          {type}&nbsp;
+        </h3>
+        <span className="font-medium text-dark/75 dark:text-light/75">
           {time} | {place}
         </span>
-        <p className="w-full font-medium">{info}</p>
+        <p className="w-full font-medium dark:text-light">{info}</p>
       </motion.div>
     </li>
   );
@@ -41,10 +43,12 @@ const Education = () => {
   });
   return (
     <div className="my-64">
-      <h2 className="mb-32 w-full text-center text-8xl font-bold">Education</h2>
+      <h2 className="mb-32 w-full text-center text-8xl font-bold dark:text-light">
+        Education
+      </h2>
       <div ref={ref} className="relative mx-auto w-[75%]">
         <motion.div
-          className="absolute left-9 top-0 h-full w-[4px] origin-top bg-dark"
+          className="absolute left-9 top-0 h-full w-[4px] origin-top bg-dark dark:bg-light"
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="ml-4 flex w-full flex-col items-start justify-between">
