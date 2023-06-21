@@ -10,7 +10,7 @@ interface SkillProps {
 const Skill: React.FC<SkillProps> = ({ name, x, y }) => {
   return (
     <motion.div
-      className="absolute flex cursor-pointer items-center justify-center rounded-full bg-dark px-6 py-3 font-semibold text-light shadow-dark"
+      className="absolute flex cursor-pointer items-center justify-center rounded-full bg-dark px-6 py-3 font-semibold text-light shadow-dark dark:bg-light dark:text-dark lg:px-4 lg:py-2 md:px-3 md:py-1.5 md:text-sm xs:bg-transparent xs:font-bold xs:text-dark xs:dark:bg-transparent xs:dark:text-light"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y }}
@@ -25,11 +25,11 @@ const Skill: React.FC<SkillProps> = ({ name, x, y }) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="mt-64 w-full text-center text-8xl font-bold dark:text-light">
+      <h2 className="mt-64 w-full text-center text-8xl font-bold dark:text-light md:mt-32 md:text-6xl">
         Skills
       </h2>
-      <div className="relative flex h-screen w-full items-center justify-center rounded-full bg-circularLight">
-        <motion.div className="flex cursor-pointer items-center justify-center rounded-full bg-dark p-8 font-semibold text-light shadow-dark">
+      <div className="relative flex h-screen w-full items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd md:dark:bg-circularDarkSm sm:h-[60vh] sm:bg-circularLightSm xs:h-[50vh]">
+        <motion.div className="flex cursor-pointer items-center justify-center rounded-full bg-dark p-8 font-semibold text-light shadow-dark dark:bg-light dark:text-dark lg:p-6 md:p-4 xs:p-2 xs:text-xs">
           Web
         </motion.div>
 
