@@ -5,6 +5,8 @@ import Navbar from "Y/components/Navbar";
 import Footer from "Y/components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import { Analytics } from '@vercel/analytics/react';
+
 
 interface MontserratOptions {
   subsets: string[];
@@ -41,6 +43,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         <Navbar />
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />
+          <Analytics />
         </AnimatePresence>
         <Footer />
       </main>
