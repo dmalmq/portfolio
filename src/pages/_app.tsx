@@ -1,12 +1,10 @@
-import { type AppType } from "next/dist/shared/lib/utils";
-import "Y/styles/globals.css";
-import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "Y/components/Navbar";
-import Footer from "Y/components/Footer";
+import "Y/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
+import { type AppType } from "next/dist/shared/lib/utils";
+import Head from "next/head";
 import { useRouter } from "next/router";
-import { Analytics } from '@vercel/analytics/react';
-
 
 interface MontserratOptions {
   subsets: string[];
@@ -45,7 +43,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           <Component key={router.asPath} {...pageProps} />
           <Analytics />
         </AnimatePresence>
-        <Footer />
       </main>
     </>
   );
