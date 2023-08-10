@@ -1,10 +1,10 @@
-import React from "react";
-import Head from "next/head";
-import Layout from "../components/Layout";
-import AnimatedText from "../components/AnimatedText";
-import Link from "next/link";
-import Image from "next/image";
 import { GithubIcon } from "Y/components/Icons";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import AnimatedText from "../components/AnimatedText";
+import Layout from "../components/Layout";
 import TransitionEffect from "../components/TransitionEffect";
 
 interface FeaturedProjectProps {
@@ -84,56 +84,64 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({
   );
 };
 
-// const Project: React.FC<ProjectProps> = ({
-//   type,
-//   title,
-//   img,
-//   link,
-//   github,
-// }) => {
-//   return (
-//     <article className="flex relative flex-col justify-center items-center p-6 w-full rounded-2xl border border-solid border-dark bg-light xs:p-4 dark:border-light dark:bg-dark">
-//       <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
-//       <Link
-//         href={link}
-//         target="_blank"
-//         className="overflow-hidden w-full rounded-lg cursor-pointer"
-//       >
-//         <Image
-//           src={img}
-//           alt="title"
-//           className="w-full h-auto rounded-2xl"
-//           width={3100}
-//           height={1700}
-//         />
-//       </Link>
-//       <div className="flex flex-col justify-between items-start w-full">
-//         <span className="text-xl font-medium md:text-base lg:text-lg text-primary dark:text-primaryDark">{type}</span>
-//         <Link
-//           href={link}
-//           target="_blank"
-//           className="hover:underline underline-offset-2"
-//         >
-//           <h2 className="my-2 w-full text-3xl font-bold text-left lg:text-2xl">{title}</h2>
-//         </Link>
-//         <div className="flex justify-between mt-2 w-full item-center">
-//           <Link
-//             href={link}
-//             target="_blank"
-//             className="ml-4 text-lg font-semibold md:text-base dark:bg-light dark:text-dark"
-//           >
-//             Visit Project
-//           </Link>
-//           <div className="flex items-center mt-2">
-//             <Link href={github} target="_blank" className="w-8 md:w-6 dark:text-light">
-//               <GithubIcon />
-//             </Link>
-//           </div>
-//         </div>
-//       </div>
-//     </article>
-//   );
-// };
+const Project: React.FC<ProjectProps> = ({
+  type,
+  title,
+  img,
+  link,
+  github,
+}) => {
+  return (
+    <article className="relative flex w-full flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 dark:border-light dark:bg-dark xs:p-4">
+      <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
+      <Link
+        href={link}
+        target="_blank"
+        className="w-full cursor-pointer overflow-hidden rounded-lg"
+      >
+        <Image
+          src={img}
+          alt="title"
+          className="h-auto w-full rounded-2xl"
+          width={3100}
+          height={1700}
+        />
+      </Link>
+      <div className="flex w-full flex-col items-start justify-between">
+        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
+          {type}
+        </span>
+        <Link
+          href={link}
+          target="_blank"
+          className="underline-offset-2 hover:underline"
+        >
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
+            {title}
+          </h2>
+        </Link>
+        <div className="item-center mt-2 flex w-full justify-between">
+          <Link
+            href={link}
+            target="_blank"
+            className="ml-4 text-lg font-semibold dark:bg-light dark:text-dark md:text-base"
+          >
+            Visit Project
+          </Link>
+          <div className="mt-2 flex items-center">
+            <Link
+              href={github}
+              target="_blank"
+              className="w-8 dark:text-light md:w-6"
+            >
+              <GithubIcon />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+};
 
 // for smaller projects use sm:col-span-12
 const projects = () => {
@@ -161,8 +169,28 @@ const projects = () => {
                 type="Ruby on Rails"
                 summary="A Ruby on Rails app that lets you generate quizzes based on your interests, the app uses the GPT-3 API to generate questions in the background using sidekiq. This was the final project at Le Wagoh, Tokyo and it was made over the course of two weeks."
                 img="/images/quizmate.jpg"
-                link="https://www.quizmate.tech/"
+                link="https://github.com/dmalmq/Quizmate"
                 github="https://github.com/dmalmq/Quizmate"
+              />
+            </div>
+
+            <div className="col-span-6">
+              <Project
+                title="Investment Calculator"
+                type="React"
+                img="/images/investment.jpg"
+                link="https://savings-calculator-six.vercel.app/"
+                github="https://github.com/dmalmq/savings-calculator"
+              />
+            </div>
+
+            <div className="col-span-6">
+              <Project
+                title="Food Ordering App"
+                type="React"
+                img="/images/food-order.jpg"
+                link="https://food-app-lilac-omega.vercel.app/"
+                github="https://github.com/dmalmq/Food-app"
               />
             </div>
 
@@ -172,7 +200,7 @@ const projects = () => {
                 type="Ruby on Rails"
                 summary="A Ruby on Rails app that lets doctors book hospital rooms for their patients and it lets hospitals rent out their hospital rooms. The project was part of our first project week at Le Wagon, Tokyo"
                 img="/images/medease.jpg"
-                link="https://medease.herokuapp.com/"
+                link="https://github.com/dmalmq/Quizmate"
                 github="https://github.com/dmalmq/Quizmate"
               />
             </div>
